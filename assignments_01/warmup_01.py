@@ -372,7 +372,10 @@ def test_celsius_to_fahrenheit():
     assert celsius_to_fahrenheit(100) == 212
     assert celsius_to_fahrenheit(37) == pytest.approx(98.6)
 
-
+# Pytest showed that the actual value was 257.0,
+# while the expected value was 212.
+# This is more useful than a bare assertion failure because
+# it shows the exact difference between the actual and expected values.
 # pytest.approx is needed because floating-point arithmetic can
 # produce a tiny precision difference from the expected decimal.
 
@@ -426,5 +429,7 @@ def test_mean_values(values, expected):
     assert mean(values) == pytest.approx(expected)
 
 
-# Parametrization avoids duplicated test code, makes each case
-# independently visible in pytest output, and simplifies maintenance.
+# Pytest summary: 6 passed in 0.18s.
+# Parametrization is better because it checks multiple input/output
+# pairs in one test function, reduces duplicated code, and makes
+# each case visible in pytest output.
