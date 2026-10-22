@@ -156,6 +156,14 @@ r2_test_full = model_full.score(X_test_full, y_test_full)
 print("\nFull Model Results:")
 print("Train R²:", r2_train_full)
 print("Test R²:", r2_test_full)
+
+# The train R² is about 0.866, while the test R² is about 0.891.
+# The test score is slightly higher than the training score, so there is no
+# concerning train/test gap suggesting overfitting. The model generalizes
+# well to the test data, although the small difference may be due to the
+# particular train/test split.
+
+
 print("Test RMSE:", rmse_full)
 
 print("\nFeature coefficients:")
@@ -197,6 +205,10 @@ plt.tight_layout()
 plt.savefig("outputs/predicted_vs_actual_high.png")
 plt.show()
 
+# One result that surprised me was that the full model performed slightly
+# better on the test data than on the training data. I expected the training
+# score to be higher, but the results suggest that the model generalizes well
+# to this particular test set.
 # Points above the diagonal mean actual temperatures were higher
 # than predicted, so the model underestimated the temperature.
 # Points below the diagonal mean actual temperatures were lower
