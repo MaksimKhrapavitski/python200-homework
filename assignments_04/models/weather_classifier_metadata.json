@@ -1,0 +1,15 @@
+{
+    "python_version": "3.12.15",
+    "scikit_learn_version": "1.9.1",
+    "feature_names": [
+        "temperature_2m_max",
+        "temperature_2m_min",
+        "precipitation_sum",
+        "wind_speed_10m_max"
+    ],
+    "label_rule": "Good day if maximum temperature is between 7 and 26 C, minimum temperature is at least 0 C, precipitation is under 3 mm, and maximum wind speed is under 30 km/h.",
+    "city": "Raleigh, North Carolina, USA",
+    "test_accuracy": 0.9041095890410958,
+    "test_f1": 0.8813559322033898,
+    "best_k": 3
+}
