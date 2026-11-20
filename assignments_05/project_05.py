@@ -148,8 +148,7 @@ bullets = [
     "Made reports for the management team",
     "Worked with a team to finish the project on time"
 ]
-
-#rewritten_bullets = rewrite_bullets(bullets)
+rewritten_bullets = rewrite_bullets(bullets)
 
 # Reflection:
 # The original bullets are weak because they are too general
