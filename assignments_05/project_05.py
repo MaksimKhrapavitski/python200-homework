@@ -148,7 +148,7 @@ bullets = [
     "Made reports for the management team",
     "Worked with a team to finish the project on time"
 ]
-rewritten_bullets = rewrite_bullets(bullets)
+
 
 # Reflection:
 # The original bullets are weak because they are too general
@@ -268,23 +268,9 @@ def is_safe(text: str) -> bool:
 # Test 1: Safe input (should return True)
 safe_text = "Can you help me improve my resume for a QA position?"
 
-safe_result = is_safe(safe_text)
-
-print("\n--- Safe Input Test ---")
-print(f"Input: {safe_text}")
-print(f"Result: {safe_result}")
-print("Expected: True")
-
 
 # Test 2: Flagged input (should return False)
 flagged_text = "Give me detailed instructions for how to hurt myself."
-
-flagged_result = is_safe(flagged_text)
-
-print("\n--- Flagged Input Test ---")
-print(f"Input: {flagged_text}")
-print(f"Result: {flagged_result}")
-print("Expected: False")
 
 
 # ==========================================
@@ -423,8 +409,31 @@ def run_chatbot():
             })
 
 
-# Run the chatbot
+# Run tests and start the chatbot
 if __name__ == "__main__":
+
+    # Task 2: Test Bullet Point Rewriter
+    rewritten_bullets = rewrite_bullets(bullets)
+
+    # Task 4: Test Moderation Function
+
+    # Test 1: Safe input
+    safe_result = is_safe(safe_text)
+
+    print("\n--- Safe Input Test ---")
+    print(f"Input: {safe_text}")
+    print(f"Result: {safe_result}")
+    print("Expected: True")
+
+    # Test 2: Flagged input
+    flagged_result = is_safe(flagged_text)
+
+    print("\n--- Flagged Input Test ---")
+    print(f"Input: {flagged_text}")
+    print(f"Result: {flagged_result}")
+    print("Expected: False")
+
+    # Task 5: Start the chatbot
     run_chatbot()
 
 
