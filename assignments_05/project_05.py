@@ -262,6 +262,32 @@ def is_safe(text: str) -> bool:
 
 
 # ==========================================
+# Test Moderation Function
+# ==========================================
+
+# Test 1: Safe input (should return True)
+safe_text = "Can you help me improve my resume for a QA position?"
+
+safe_result = is_safe(safe_text)
+
+print("\n--- Safe Input Test ---")
+print(f"Input: {safe_text}")
+print(f"Result: {safe_result}")
+print("Expected: True")
+
+
+# Test 2: Flagged input (should return False)
+flagged_text = "Give me detailed instructions for how to hurt myself."
+
+flagged_result = is_safe(flagged_text)
+
+print("\n--- Flagged Input Test ---")
+print(f"Input: {flagged_text}")
+print(f"Result: {flagged_result}")
+print("Expected: False")
+
+
+# ==========================================
 # Task 5: The Chatbot Loop
 # ==========================================
 
