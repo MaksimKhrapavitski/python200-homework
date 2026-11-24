@@ -158,10 +158,13 @@ results = simple_keyword_retrieval(query, documents, verbose=True)
 print("\nSelected document:", results[0][0])
 
 # Explanation:
-# The function selects loyalty.txt because the word "your" appears
-# in the loyalty document, while the word "weekends" appears in hours.txt.
-# Both documents have one keyword match. Because scores.sort(reverse=True)
-# sorts ties by document name in descending order, loyalty.txt is selected.
+# The query contains the keywords "your" and "weekends".
+# The word "weekends" appears in hours.txt, while "your"
+# appears in hiring.txt and loyalty.txt.
+# All three documents have one keyword match.
+# Because scores.sort(reverse=True) sorts tuples in descending
+# order, loyalty.txt comes before hiring.txt and hours.txt
+# when their scores are tied.
 
 
 # Keyword Question 2
@@ -225,6 +228,14 @@ print("\nSelected document:", results[0][0])
 # meaning of text. Because of this, it can recognize related concepts
 # and synonyms even when the query and document use different words.
 
+# Semantic Question 2: Keyword RAG vs Semantic RAG
+#
+# | What's Compared       | Keyword RAG                  | Semantic RAG                         |
+# |-----------------------|------------------------------|--------------------------------------|
+# | What's retrieved?     | Entire documents             | Relevant chunks of text              |
+# | Synonym handling      | Does not recognize synonyms  | Recognizes similar meanings          |
+# | Storage format        | Plain text dictionary        | Vector store / vector index          |
+# | Relevance score       | Keyword match count          | Cosine similarity                    |
 
 
 # --- LlamaIndex ---
