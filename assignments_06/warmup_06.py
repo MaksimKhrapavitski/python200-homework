@@ -230,13 +230,14 @@ print("\nSelected document:", results[0][0])
 
 # Semantic Question 2: Keyword RAG vs Semantic RAG
 #
-# | What's Compared       | Keyword RAG                  | Semantic RAG                         |
-# |-----------------------|------------------------------|--------------------------------------|
-# | What's retrieved?     | Entire documents             | Relevant chunks of text              |
-# | Synonym handling      | Does not recognize synonyms  | Recognizes similar meanings          |
-# | Storage format        | Plain text dictionary        | Vector store / vector index          |
-# | Relevance score       | Keyword match count          | Cosine similarity                    |
-
+# Semantic Question 2: Keyword RAG vs Semantic RAG
+#
+# | What is compared?    | Exact word overlap           | Semantic/meaning similarity via embeddings |
+# |----------------------|------------------------------|---------------------------------------------|
+# | What's retrieved?    | Entire documents             | Relevant chunks of text                    |
+# | Synonym handling     | Does not recognize synonyms  | Recognizes similar meanings                 |
+# | Storage format       | Plain text dictionary        | Vector store / vector index                |
+# | Relevance score      | Keyword match count          | Cosine similarity                           |
 
 # --- LlamaIndex ---
 
